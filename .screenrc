@@ -1,0 +1,20 @@
+#shell /bin/zsh
+#encoding UTF-8
+vbell off
+#defnonblock 5
+startup_message off
+
+hardstatus alwayslastline
+
+hardstatus string '%{bk}[ %{W}% %{b}]%{bk}[ %{W}%m/%{W}%d %{W}%c%{b}]%{bk}[%= %{wk}%?%-Lw%?%{=b kB}(%{W}%n*%f %t%?(%u)%?%{=b kB})%{=kw}%?%+Lw%?%?%= %{b}][%{W}%l%{b}]'
+
+shelltitle 'zsh'
+
+bindkey -k k8 title
+bindkey -k k9 screen
+bindkey -k k; prev
+bindkey -k F1 next
+bindkey -k F2 windowlist -b
+
+termcapinfo xterm ti@:te@
+termcapinfo rxvt ti@:te@
